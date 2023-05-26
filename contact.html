@@ -28,10 +28,20 @@
             </header>    
         </header>
 
-        <div class="container" style="background-color: aliceblue; height: 500px; margin-top: 20px; padding-left: 40px;">
+        <div class="container" style="background-color: aliceblue; margin-top: 20px; padding-left: 40px;">
             <h1>Contact Us</h1>
             <p id="main">Please do reach us if you have any inquires.</p>
 
+            <h3>Email</h3>
+            <p>support@abclearningcenter.com.my</p>
+
+            <h3>Phone</h3>
+            <p>+604 - 468 2444</p>
+
+            <h3>Location</h3>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15888.025024953724!2d100.3417511!3d5.4160155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3e21aa452f7%3A0x5d72532ef1412cb0!2sBangunan%20Wawasan!5e0!3m2!1sen!2smy!4v1685076001568!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+            <button id="show-btn">Message Us</button>
             <form style="margin-top: 10px; margin-bottom: 10px;" id="myForm">
                 <label for="name">Name</label><br>
                 <input type="text" id="name"name="name" placeholder="Enter your name"/><br><br>
@@ -47,5 +57,11 @@
 
         <footer style="margin-top: 10px; background-color: antiquewhite; padding-left: 40px;">&copy; 2023. Made with love in Penang. </footer>           
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            $('#myForm').hide();
+            $('#show-btn').click(function() {
+                $('#myForm').slideDown();
+            });
+        </script>
     </body>
 </html>
