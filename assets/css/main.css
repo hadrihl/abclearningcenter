@@ -1,7 +1,9 @@
 ul li {
     padding-right: 10px;
+    display: inline;
 }
 
-ul li {
-    display: inline;
+ul.sublink li {
+    display: block;
+    list-style-type: square;
 }
