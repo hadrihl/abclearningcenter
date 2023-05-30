@@ -1,9 +1,28 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>About Us</title>
         <link rel="stylesheet" href="assets/css/main.css">
+        <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+        <script>
+            function processSignup() {
+                $.ajax({
+                    url: "https://api.apispreadsheets.com/data/gdnbKysuLGcm9FLK/",
+                    type: "post",
+                    data: $("#myForm").serializeArray(),
+                    success: function() {
+                        alert("Success!")
+                    },
+                    error: function() {
+                        alert("Fail")
+                    }
+                });
+            };
+        </script>
     </head>
     <body>
         <header style="background-color: beige; margin-top: 10px; margin-bottom: 10px;">
@@ -20,22 +39,84 @@
             <h1>Sign Up</h1>
             
             <form id="myForm">
-                <label for="name" style="display: block; margin-top: 20px;">Name</label>
-                <input type="text" id="name" name="name">
+                <label style="display: block; margin-top: 20px;">Name</label>
+                <input type="text" name="name">
 
-                <label for="email" style="display: block; margin-top: 20px;">Email</label>
-                <input type="email" id="email" name="email">
+                <label style="display: block; margin-top: 20px;">Email</label>
+                <input type="email" name="email">
 
-                <label for="phone" style="display: block; margin-top: 20px;">Phone number</label>
-                <input type="number" id="phone" name="phone">
+                <label style="display: block; margin-top: 20px;">Phone number</label>
+                <input type="number" name="phone">
 
-                <label for="address" style="display: block; margin-top: 20px;">Address</label>
+                <label style="display: block; margin-top: 20px;">Address</label>
                 <textarea name="address" rows="10" cols="50"></textarea><br>
 
-                <button type="submit" onclick="processSignup()" style="margin-top: 20px;">Submit</button>
+                <button onclick="processSignup()" style="margin-top: 20px;">Submit</button>
             </form>
         </div>
 
         <footer style="background-color: antiquewhite; margin-top: 10px; margin-bottom: 10px; padding-left: 40px;">&copy; 2023. Made with love in Penang.</footer>
     </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/gdnbKysuLGcm9FLK/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+                    location.replace("http://localhost")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+    <header style="background-color: beige; margin-top: 10px; margin-bottom: 10px;">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+    </header>
+
+    <div class="content" style="background-color: aliceblue; margin-top: 10px; margin-bottom: 10px; padding-bottom: 50px; padding-left: 40px;">
+        <h1>Sign Up</h1>
+
+        <form id="myForm" style="margin-top: 10px; margin-bottom: 10px;">
+            <label style="display: block; margin-top: 20px;">name</label>
+            <input name="name" />
+            <br/>
+            <label style="display: block; margin-top: 20px;">email</label>
+            <input name="email" />
+            <br/>
+            <label style="display: block; margin-top: 20px">phone</label>
+            <input name="phone" />
+            <br/>
+            <label style="display:block; margin-top: 20px;">address</label>
+            <textarea name="address" cols="50" rows="10"></textarea>
+            <br/>
+        </form>
+	<button onclick='SubForm()'>Submit</button>
+    </div>
+
+    <footer style="background-color: antiquewhite; margin-top: 10px; margin-bottom: 10px; padding-left: 40px;">&copy; 2023. Made with love in Penang.</footer>
+</body>
 </html>
