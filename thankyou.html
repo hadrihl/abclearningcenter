@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Thank You</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <div style="margin-top: 300px; text-align: center;">
+            <p>Thank you for your signup. You will be re-direct to homepage in
+                <span id="counter">5</span>, or click <a href="https://hadrihl.github.io/abclearningcenter">here</a>.
+            </p>
+        </div>
+        <script>
+            var count = document.getElementById("counter").innerHTML;
+            setInterval(function() {
+                count -= 1;
+                document.getElementById("counter").innerHTML = count;
+                if(count < 2) { location.replace("https://hadrihl.github.io/abclearningcenter"); }
+            }, 1000);
+        </script>
+    </body>
+</html>
