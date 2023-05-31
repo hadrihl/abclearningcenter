@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Lead Generation Form</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+    <script>
+        function submitForm() {
+            console.log("testing submit form function here...");
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-top: 10px; margin-bottom: 10px; background-color: beige;">
+        <h1>Lead Generation Form</h1>
+
+        <form id="myform" style="margin-top: 10px; margin-bottom: 10px;">
+            <label>Username</label><br>
+            <input type="text" name="name" placeholder="Enter your username"><br>
+
+            <label>Email</label><br>
+            <input type="email" name="email" placehoder="Enter your email"><br>
+
+            <label>Phone</label><br>
+            <input type="number" name="phone" placeholder="Enter your Phone number"><br> 
+
+            <label>Address</label>
+            <textarea name="address"></textarea><br>
+
+            <button onclick="submitForm()"></button>
+        </form>
+
+    </div>
+</body>
+</html>
